@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block head %}
+<div class="header_box">
+<h1>Data Visualization</h1>
+</div>
+{% endblock %}
+
+{% block body %}
+<div class="wrapper">
+<h2>Bar chart of the average price for a home in each zipcode.</h2>
+<img src={{ url_for('static', filename='category.png') }}>
+<h2>Categorical box chart relating the elementary school's rating to the price.</h2>
+<img src={{ url_for('static', filename='bar_graph.png') }}>
+<h2>Scatter chart with regression line, relating the living area (sq. ft.) of the home with price.</h2>
+<img src={{ url_for('static', filename='scatter.png') }}>
+<h2>Select a sample home to get a prediction on it's price</h2>
+<form action="/prediction">
+    <button>Select</button>
+    <select name = "house" method="GET">
+    {% for options in options %}
+    <option value="{{options}}">{{options}}</option>
+    {% endfor %}
+</select>
+</form>
+<br><br>
+<h2>Table of a sample of the data. Only the first 40 are shown of approximately 25,000 items</h2>
+{% for table in tables %}
+            {{ table|safe }}
+{% endfor %}
+
+</div>
+{% endblock %}

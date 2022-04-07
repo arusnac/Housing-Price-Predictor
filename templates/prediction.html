@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<div class="header_box">
+<h1>House Prediction</h1>
+</div>
+{% endblock %}
+
+{% block body %}
+<div class="wrapper">
+   <h3>Home features</h3>
+   <h4>{{house}}</h4>
+   <h3>Predicted Price</h3>
+   <h4>${{prediction}}</h4>
+   <h3>Model Score/Accuracy</h3>
+   <h4>{{score}}</h4>
+   <h3>Mean Absolute Error for the Model</h3>
+   <h4>{{mae}}</h4>
+   <form>
+    <input type="button" value="Back" onclick="history.back()">
+</form>
+</div>
+{% endblock %}

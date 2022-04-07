@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block body %}
+<div class="wrapper">
+    <div class="wrapper_login">
+    <form action="/data" method = "POST">
+    <label for="uname"><b>Username</b></label><br><br>
+    <input name="username" type="text" placeholder="Enter Username" required>
+        <br><br>
+    <label for="psw"><b>Password</b></label><br><br>
+    <input name="password" type="password" placeholder="Enter Password" required><br><br>
+    <input type="submit" value="Login">
+    </form>
+</div>
+</div>
+{% endblock %}
