@@ -1,0 +1,50 @@
+body{
+    height:100%;
+    font-family: sans-serif;
+
+}
+
+header{
+    height:100%;
+    font-family: sans-serif;
+}
+
+.wrapper{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+
+.wrapper_login{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.header_box{
+    height:100%;
+    display: flex;
+    justify-content: center;
+}
+
+table, th, td {
+    border: 1px solid;
+    border-collapse: collapse;
+}
+
+th{
+    background-color: rgb(165, 165, 165);
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+}
+
+.content{
+    height:100%;
+    display: flex;
+    justify-content: center;
+}
+
